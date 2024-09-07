@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="start-screen" class="screen active">
+        <h1>Tic Tac Toe</h1>
+        <button onclick="goToPlayerSelection()">Play</button>
+    </div>
+
+    <div id="player-selection" class="screen">
+        <h2>Pilih Pemain</h2>
+        <label for="player">Pilih X atau O:</label>
+        <select id="player">
+            <option value="X">X</option>
+            <option value="O">O</option>
+        </select>
+        <button onclick="startGame()">Mulai Game</button>
+    </div>
+
+    <div id="game-screen" class="screen">
+        <h1>Tic Tac Toe</h1>
+        <div class="level-select">
+            <label for="difficulty">Pilih Tingkat Kesulitan:</label>
+            <select id="difficulty">
+                <option value="easy">Mudah</option>
+                <option value="medium">Sedang</option>
+                <option value="hard">Sulit</option>
+            </select>
+        </div>
+        <div class="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        <p class="status"></p>
+        <button onclick="restartGame()">Mulai Ulang</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
